@@ -1,6 +1,6 @@
-import BannerSlider from "./BannerSlider";
-import CategorySection from "./CategorySection";
-import ProductsSection from "./ProductsSection";
+import BannerSlider from "../components/HomePage/BannerSlider";
+import CategorySection from "../components/HomePage/CategorySection";
+import ProductsSection from "../components/HomePage/ProductsSection";
 
 const Homepage = () => {
   return (

@@ -1,25 +1,25 @@
-import './App.css'
-import { createBrowserRouter, RouterProvider  } from 'react-router-dom'
-import HomePage from './components/HomePage/HomePage'
-import RootLayout from './components/RootLayout'
-import ProductDetail from './components/ProductDetail/ProductPage'
+import "./App.css";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import HomePage from "./screens/HomePage";
+import RootLayout from "./components/RootLayout";
+import ProductDetail from "./screens/ProductDetailPage";
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <RootLayout />,
-    children:[
+    children: [
       {
         index: true,
         element: <HomePage />,
       },
       {
-        path: '/product',
+        path: "/product",
         element: <ProductDetail />,
-      }
-    ]
-  }
-])
+      },
+    ],
+  },
+]);
 
 export default function App() {
   return <RouterProvider router={router} />;

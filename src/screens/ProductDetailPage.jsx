@@ -1,13 +1,13 @@
-import ImageGallery from "./ImageGallery";
-import Infor from "./Infor";
-import ProductDetails from "./ProductDetails";
-import ProductReview from "./ProductReview";
+import ImageGallery from "../components/ProductDetail/ImageGallery";
+import Infor from "../components/ProductDetail/Infor";
+import ProductDetails from "../components/ProductDetail/ProductDetails";
+import ProductReview from "../components/ProductDetail/ProductReview";
 
 import { Box } from "@mui/material";
-import pro1 from "../../assets/products/pro1.jpg";
-import bed from "../../assets/category/bed.jpg";
-import cabinet from "../../assets/category/cabinet.jpg";
-import desk from "../../assets/category/desk.jpg";
+import pro1 from "../assets/products/pro1.jpg";
+import bed from "../assets/category/bed.jpg";
+import cabinet from "../assets/category/cabinet.jpg";
+import desk from "../assets/category/desk.jpg";
 
 const images = [pro1, cabinet, bed, desk, pro1];
 
