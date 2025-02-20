@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 import { Input } from 'antd';
 import { EyeInvisibleOutlined, EyeOutlined, UserOutlined } from '@ant-design/icons';
-import { motion } from 'framer-motion';
 
 const SignUpInputs = ({ seePassword, toggleSeePassword, encryptPassword }) => {
     return (
@@ -20,20 +19,36 @@ const SignUpInputs = ({ seePassword, toggleSeePassword, encryptPassword }) => {
             
             {/* Password Input */}
             <div>
-                <div className='flex justify-between w-full'>
+                <div className='flex justify-between  w-full'>
                     <span>Password</span>
-                    <motion.span
-                        whileHover={{ scale: 1.1, color: 'blue' }}
-                        whileTap={{ scale: 0.9 }} 
-                        className='text-xs text-emerald-500 underline'
-                    >
-                        Forgot Password?
-                    </motion.span>
+                    
                 </div>
                 <Input  
                     size='large'
                     type={seePassword ? 'text' : 'password'}
                     placeholder="Enter your password"
+                    prefix={
+                        <UserOutlined style={{ color: 'rgba(0,0,0,.25)' }} />
+                    }
+                    suffix={
+                        seePassword ? (
+                            <EyeOutlined 
+                                style={{ color: 'rgba(0,0,0,.45)' }}
+                                onClick={toggleSeePassword}
+                            />
+                        ) : (
+                            <EyeInvisibleOutlined 
+                                style={{ color: 'rgba(0,0,0,.45)' }}
+                                onClick={toggleSeePassword}
+                            />
+                        )
+                    }
+                />
+                <Input
+                    className='mt-4'  
+                    size='large'
+                    type={seePassword ? 'text' : 'password'}
+                    placeholder="Confirmed password"
                     prefix={
                         <UserOutlined style={{ color: 'rgba(0,0,0,.25)' }} />
                     }

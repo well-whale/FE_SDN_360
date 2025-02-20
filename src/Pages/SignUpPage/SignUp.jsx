@@ -42,7 +42,7 @@ const SignUp = () => {
                 transition={{ duration: 0.5, delay: 0.5 }}
             >
                 <motion.div
-                    className='bg-white/60 backdrop-blur-xl flex flex-col gap-4 items-center p-20 rounded-lg shadow-lg w-fit h-[33vw]'
+                    className='bg-white/60 backdrop-blur-xl flex flex-col gap-4 items-center p-20 rounded-lg shadow-lg w-[30%] h-[33vw]'
                     initial={{ opacity: 0, y: 100 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 2, delay: 1, type: 'spring', stiffness: 120 }}
@@ -64,18 +64,18 @@ const SignUp = () => {
                         encryptPassword={encryptPassword} 
                     />
 
-                    {/* Sign In Button */}
+                    {/* Sign UUn Button */}
                     <div className='pr-10 pl-10 w-full'>
                         <motion.button
                             className='w-full mt-4 p-2 text-white bg-gradient-to-tr from-teal-200 to-teal-500 text-xl rounded-4xl'
                             whileHover={{ scale: 1.1, color: 'black' }}
                             whileTap={{ scale: 0.9, color: 'white' }}
                         >
-                            Sign In <SwapRightOutlined />
+                            Sign Up <SwapRightOutlined />
                         </motion.button>
                     </div>
 
-                    {/* Sign Up Link */}
+                    {/* Sign In Link */}
                     <motion.div
                         whileHover={{ scale: 1.1, color: 'black' }}
                         whileTap={{ scale: 0.9 }}

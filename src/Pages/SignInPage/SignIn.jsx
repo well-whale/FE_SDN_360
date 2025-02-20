@@ -42,7 +42,7 @@ const SignIn = () => {
                 transition={{ duration: 0.5, delay: 0.5 }}
             >
                 <motion.div
-                    className='bg-white/60 backdrop-blur-xl flex flex-col gap-4 items-center p-20 rounded-lg shadow-lg w-fit h-[33vw]'
+                    className='bg-white/60 backdrop-blur-xl flex flex-col gap-4 items-center p-20 rounded-lg shadow-lg w-[30%] h-[33vw]'
                     initial={{ opacity: 0, y: 100 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 2, delay: 1, type: 'spring', stiffness: 120 }}
