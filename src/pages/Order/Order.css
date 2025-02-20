@@ -1,0 +1,75 @@
+/* Tổng thể */
+.order-container {
+    display: flex;
+    background: white;
+    width: 85%;
+    justify-self: center;
+}
+
+.order-box {
+    display: flex;
+    width: 100%;
+}
+
+/* Sidebar */
+.sidebar {
+    background: #f0dfcf;
+    padding: 20px;
+    border-radius: 12px;
+    width: 250px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-list {
+    padding: 0;
+    color: #333;
+}
+
+.sidebar-item {
+    padding: 12px 18px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.sidebar-item:hover {
+    background-color: #e3f2fd;
+}
+
+.sidebar-item.active {
+    background-color: #ff8800;
+    color: white;
+}
+
+/* Nội dung */
+.content {
+    flex-grow: 1;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    width: calc(100% - 250px); /* Adjust width to account for sidebar */
+    min-height: 400px;
+}
+
+/* Hiệu ứng chuyển động */
+.fade-enter {
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.fade-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.fade-exit {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-exit-active {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s, transform 0.3s;
+}
