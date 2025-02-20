@@ -1,11 +1,11 @@
 import * as React from "react";
 import "./OrderDetailManager.css";
 import { List, ListItem, ListItemText } from "@mui/material";
-import { CSSTransition } from "react-transition-group";
 import OrderDetail from "../../components/OderManager/OrderDetail";
 
 export default function OrderDetailManager() {
   const [selectedIndex, setSelectedIndex] = React.useState(2);
+  // eslint-disable-next-line no-unused-vars
   const [inProp, setInProp] = React.useState(true);
 
   const handleListItemClick = (event, index) => {
