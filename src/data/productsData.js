@@ -6,6 +6,7 @@ const productsData = [
     productDescription:
       "A sturdy and elegant wooden dining table that seats six people. Made of high-quality oak.",
     productImage: "dining_table.jpg",
+    imageUrl: "https://picsum.photos/seed/dining_table/400/300",
     quantity: 10,
     price: 499.99,
     color: "Red",
@@ -21,6 +22,7 @@ const productsData = [
     productDescription:
       "A luxurious brown leather recliner sofa with soft cushions and an adjustable headrest.",
     productImage: "recliner_sofa.jpg",
+    imageUrl: "https://picsum.photos/seed/recliner_sofa/400/300",
     quantity: 5,
     price: 799.99,
     color: "Blue",
@@ -36,6 +38,7 @@ const productsData = [
     productDescription:
       "A sleek black wooden bookshelf with five spacious shelves for books and decor.",
     productImage: "bookshelf.jpg",
+    imageUrl: "https://picsum.photos/seed/bookshelf/400/300",
     quantity: 15,
     price: 199.99,
     color: "Green",
@@ -44,6 +47,38 @@ const productsData = [
     createDate: "2024-02-14",
     status: "Available",
   },
-]
+  {
+    product_id: 4,
+    category_id: 104,
+    productName: "Glass Coffee Table",
+    productDescription:
+      "A stylish glass coffee table with a sleek metal frame, perfect for modern living rooms.",
+    productImage: "coffee_table.jpg",
+    imageUrl: "https://picsum.photos/seed/coffee_table/400/300",
+    quantity: 8,
+    price: 249.99,
+    color: "Black",
+    material: "Glass & Metal",
+    size: "120cm x 60cm x 45cm",
+    createDate: "2024-02-16",
+    status: "Available",
+  },
+  {
+    product_id: 5,
+    category_id: 105,
+    productName: "Ergonomic Office Chair",
+    productDescription:
+      "A comfortable ergonomic office chair with adjustable height and lumbar support.",
+    productImage: "office_chair.jpg",
+    imageUrl: "https://picsum.photos/seed/office_chair/400/300",
+    quantity: 20,
+    price: 149.99,
+    color: "Gray",
+    material: "Mesh & Metal",
+    size: "70cm x 70cm x 120cm",
+    createDate: "2024-02-18",
+    status: "Available",
+  },
+];
 
-export default productsData
+export default productsData;

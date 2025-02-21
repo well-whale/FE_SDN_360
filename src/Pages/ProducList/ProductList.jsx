@@ -33,9 +33,10 @@ function ProductList() {
       return
     }
 
-    const results = productList.filter((product) =>
-      product.productName.toLowerCase().includes(term.toLowerCase()) ||
-      product.productDescription.toLowerCase().includes(term.toLowerCase())
+    const results = productList.filter(
+      (product) =>
+        product.productName.toLowerCase().includes(term.toLowerCase()) ||
+        product.productDescription.toLowerCase().includes(term.toLowerCase())
     )
 
     setSearchResults(results)
@@ -51,7 +52,8 @@ function ProductList() {
     const colorMatch =
       filters.colors.length === 0 || filters.colors.includes(product.color)
     const materialMatch =
-      filters.materials.length === 0 || filters.materials.includes(product.material)
+      filters.materials.length === 0 ||
+      filters.materials.includes(product.material)
     const sizeMatch =
       filters.sizes.length === 0 || filters.sizes.includes(product.size)
     const priceMatch =
@@ -60,14 +62,7 @@ function ProductList() {
   })
 
   return (
-    <>
-      <SearchBar
-        searchTerm={searchTerm}
-        handleSearch={handleSearch}
-        searchResults={searchResults}
-        isSearchVisible={isSearchVisible}
-        handleProductClick={handleProductClick}
-      />
+    <div className=" max-w-[1000px] w-full mx-auto">
       <Filters
         products={productList}
         filters={filters}
@@ -75,9 +70,6 @@ function ProductList() {
         priceRange={priceRange}
         setPriceRange={setPriceRange}
       />
-      <Rate allowHalf onChange={handleRating} />
-      {rating}/5
-      <CommentSection />
       <div>
         {selectedProduct ? (
           <div>
@@ -88,10 +80,19 @@ function ProductList() {
             <p>{selectedProduct.productDescription}</p>
           </div>
         ) : (
-          <ProductGrid products={filteredProducts} /> 
+          <ProductGrid products={filteredProducts} />
         )}
       </div>
-    </>
+
+      <SearchBar
+        searchTerm={searchTerm}
+        handleSearch={handleSearch}
+        searchResults={searchResults}
+        isSearchVisible={isSearchVisible}
+        handleProductClick={handleProductClick}
+      />
+      <CommentSection />
+    </div>
   )
 }
 
