@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import RootLayout from "./components/RootLayout";
 
 import Homepage from "./Pages/HomePage/HomePage";
+import ProductList from "./Pages/ProducList/ProductList"
 import ProductDetailPage from "./Pages/ProductDetail/ProductDetailPage";
 import SignIn from "./Pages/SignInPage/SignIn";
 import SignUp from "./Pages/SignUpPage/SignUp";
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
       {
         path: "/order/:orderId",
         element: <OrderDetailManager />,
+      },
+      {
+        path:'/products',
+        element: <ProductList />
       }
 
     ],
