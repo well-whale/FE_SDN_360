@@ -9,6 +9,9 @@ import SignIn from "./Pages/SignInPage/SignIn";
 import SignUp from "./Pages/SignUpPage/SignUp";
 import Order from "./Pages/Order/Order";
 import OrderDetailManager from "./Pages/OrderDetail/OrderDetailManager";
+import AdminLayout from "./components/AdminLayout";
+import CustomerList from "./Pages/Admin/CustomerList";
+import CustomerDetail from "./Pages/Admin/CustomerDetail";
 
 const router = createBrowserRouter([
   {
@@ -46,6 +49,20 @@ const router = createBrowserRouter([
 
     ],
   },
+  {
+    path: "/admin",
+    element: <AdminLayout />,
+    children: [
+      {
+        path: "customers", 
+        element: <CustomerList />,
+      },
+      {
+        path: "customers/:customerId", 
+        element: <CustomerDetail />,
+      },
+    ]
+  }
 ]);
 
 export default function App() {
