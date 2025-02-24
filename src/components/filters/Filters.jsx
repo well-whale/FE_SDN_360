@@ -37,7 +37,7 @@ const Filters = ({
   };  
 
   return (
-    <div className="m-4 flex gap-3">
+    <div className="flex gap-3 py-4">
       <ColorFilter
         isColorOpen={openFilters.color}
         setIsColorOpen={() => handleFilterToggle("color")}

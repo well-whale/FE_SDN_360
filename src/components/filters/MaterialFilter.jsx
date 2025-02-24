@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react"
 
 const MaterialFilter = ({
   isMaterialOpen,
@@ -7,42 +7,42 @@ const MaterialFilter = ({
   selectedMaterials,
   setFilters,
 }) => {
-  const [localSelection, setLocalSelection] = useState(selectedMaterials);
+  const [localSelection, setLocalSelection] = useState(selectedMaterials)
 
   useEffect(() => {
-    setLocalSelection(selectedMaterials);
-  }, [selectedMaterials]);
+    setLocalSelection(selectedMaterials)
+  }, [selectedMaterials])
 
   const toggleOption = (option) => {
     setLocalSelection((prev) =>
       prev.includes(option)
         ? prev.filter((item) => item !== option)
         : [...prev, option]
-    );
-  };
+    )
+  }
 
   const applyFilter = () => {
-    setFilters((prev) => ({ ...prev, materials: localSelection }));
-    setIsMaterialOpen(false);
-  };
+    setFilters((prev) => ({ ...prev, materials: localSelection }))
+    setIsMaterialOpen(false)
+  }
 
   const resetFilter = () => {
-    setLocalSelection([]);
-    setFilters((prev) => ({ ...prev, materials: [] }));
-    setIsMaterialOpen(false);
-  };
+    setLocalSelection([])
+    setFilters((prev) => ({ ...prev, materials: [] }))
+    setIsMaterialOpen(false)
+  }
 
   return (
     <div className="relative">
       <div
-        className="p-[5px_10px] border shadow-lg cursor-pointer"
+        className="text-sm py-[5px] rounded-sm w-[120px] border border-gray-300 bg-white cursor-pointer flex justify-center hover:bg-gray-100 duration-300"
         onClick={setIsMaterialOpen}
       >
         Materials
       </div>
 
       {isMaterialOpen && (
-        <div className="absolute z-50 border shadow-lg p-[5px_10px] bg-white">
+        <div className="absolute z-50 border border-gray-300 bg-white rounded p-[5px_10px]">
           <ul>
             {materialOptions.map((option) => (
               <li
@@ -65,13 +65,13 @@ const MaterialFilter = ({
           </ul>
           <div className="flex gap-2 mt-2">
             <button
-              className="border p-[5px_10px] hover:text-gray-300"
+              className="text-sm py-[5px] rounded-sm w-[120px] border border-gray-300 bg-white cursor-pointer flex justify-center hover:bg-gray-100 duration-300"
               onClick={applyFilter}
             >
               Apply
             </button>
             <button
-              className="border p-[5px_10px] hover:text-gray-300"
+              className="text-sm py-[5px] rounded-sm w-[120px] border border-gray-300 bg-white cursor-pointer flex justify-center hover:bg-gray-100 duration-300"
               onClick={resetFilter}
             >
               Reset
@@ -80,7 +80,7 @@ const MaterialFilter = ({
         </div>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default MaterialFilter;
+export default MaterialFilter

@@ -12,6 +12,7 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import MenuIcon from "@mui/icons-material/Menu";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -116,7 +117,7 @@ const Header = () => {
           <IconButton>
             <MenuIcon />
           </IconButton>
-          <Typography variant="body2" fontWeight="bold" sx={{ color: "black" }}>
+          <Typography variant="body2" fontWeight="bold" sx={{ color: "black" }} component={Link} to="/products">
             SẢN PHẨM
           </Typography>
         </Box>

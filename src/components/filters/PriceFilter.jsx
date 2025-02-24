@@ -34,13 +34,13 @@ const PriceFilter = ({
   return (
     <div className="relative">
       <div
-        className="p-[5px_10px] border shadow-lg flex"
+        className="text-sm py-[5px] rounded-sm w-[120px] border border-gray-300 bg-white cursor-pointer flex justify-center hover:bg-gray-100 duration-300"
         onClick={setIsPriceOpen}
       >
         Price
       </div>
       {isPriceOpen && (
-        <div className="flex flex-col gap-[5px] whitespace-nowrap absolute z-50 border shadow-lg p-[5px_10px] bg-white">
+        <div className="flex flex-col gap-[5px] whitespace-nowrap absolute z-50 p-[5px_10px] border border-gray-300 bg-white rounded">
           <Slider
             range
             min={minPrice}
@@ -58,13 +58,13 @@ const PriceFilter = ({
 
           <div className="flex gap-3">
             <button
-              className="border p-[5px_10px] hover:text-gray-300"
+              className="text-sm py-[5px] rounded-sm w-[120px] border border-gray-300 bg-white cursor-pointer flex justify-center hover:bg-gray-100 duration-300"
               onClick={applyFilter}
             >
               Apply
             </button>
             <button
-              className="border p-[5px_10px] hover:text-gray-300"
+              className="text-sm py-[5px] rounded-sm w-[120px] border border-gray-300 bg-white cursor-pointer flex justify-center hover:bg-gray-100 duration-300"
               onClick={resetFilter}
             >
               Reset
