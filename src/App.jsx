@@ -7,7 +7,8 @@ import ProductDetailPage from "./Pages/ProductDetail/ProductDetailPage";
 import SignIn from "./Pages/SignInPage/SignIn";
 import SignUp from "./Pages/SignUpPage/SignUp";
 import Order from "./Pages/Order/Order";
-import OrderDetailManager from "./Pages/OrderDetail/OrderDetailManager";
+import ProductsManager from "./Pages/Staff/Product/ProductsManager";
+import OrderDetailManager from "./pages/OrderDetail/OrderDetailManager";
 
 const router = createBrowserRouter([
   {
@@ -37,8 +38,16 @@ const router = createBrowserRouter([
       {
         path: "/order/:orderId",
         element: <OrderDetailManager />,
-      }
+      },
+      
 
+    ]
+  },
+  {
+    path: "/staff",
+    // element: <RootLayout />, // Nếu bạn muốn có layout khác cho staff, thay đổi tại đây
+    children: [
+      { path: "product", element: <ProductsManager /> }, 
     ],
   },
 ]);
