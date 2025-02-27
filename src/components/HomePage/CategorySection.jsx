@@ -36,8 +36,8 @@ const CategorySection = () => {
           key={category.id}
           style={{
             position: "relative",
-            width: "70px",
-            height: "95px",
+            width: "80px",
+            height: "120px",
             borderRadius: "10px",
             padding: "10px",
             backgroundColor: "#fff",

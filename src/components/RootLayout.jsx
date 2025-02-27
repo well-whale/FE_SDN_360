@@ -12,7 +12,6 @@ function RootLayout() {
 
       <div style={{ flex: 1, padding: "20px", backgroundColor: "#f5f5f5" }}>
         {location.pathname !== "/" && <CustomSeparator />}
-
         <Outlet />
       </div>
       <Footer />

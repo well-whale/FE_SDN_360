@@ -29,7 +29,7 @@ const BannerSlider = () => {
   };
 
   return (
-    <div style={{ border: "1px solid ", borderRadius: "10px", position: "relative" }}>
+    <div style={{ borderRadius: "10px", position: "relative" }}>
       <Slider ref={setSliderRef} {...settings}>
         {images.map((src, index) => (
           <div key={index} style={{ minHeight: "400px" }}>
